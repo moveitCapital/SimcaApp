@@ -1,0 +1,78 @@
+# ==========================================
+# 1. Gradle & Kotlin Multiplatform (KMP)
+# ==========================================
+.gradle/
+build/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Configuración local de Gradle
+gradle.properties.user
+local.properties
+
+# Cache de Kotlin / Native
+.kotlin/
+.konan/
+
+# ==========================================
+# 2. Android & Android Studio
+# ==========================================
+*.ap_
+*.apk
+*.aab
+*.dex
+*.class
+
+# IDE (Android Studio / IntelliJ IDEA)
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries/
+.idea/libraries/
+captures/
+
+# ==========================================
+# 3. iOS & Xcode
+# ==========================================
+# Archivos de estado del usuario de Xcode
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+
+# Datos derivados de compilación y esquemas compartidos
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+DerivedData/
+
+# Swift Package Manager / Carthage
+.build/
+Carthage/Build/
+
+# CocoaPods (Eliminar la '#' de Pods/ si NO quieres subir las dependencias de Pods al repositorio)
+# Pods/
+
+# ==========================================
+# 4. Sistema Operativo / Otros
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
