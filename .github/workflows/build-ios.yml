@@ -23,7 +23,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build Kotlin Multiplatform Framework
-        run: ./gradlew :shared:embedAndSignAppleFrameworkForXcode
+        run: ./gradlew :composeApp:embedAndSignAppleFrameworkForXcode
         env:
           CONFIGURATION: Debug
           SDK_NAME: iphonesimulator
