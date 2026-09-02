@@ -22,18 +22,6 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Build Kotlin Multiplatform Framework
-        run: ./gradlew :composeApp:embedAndSignAppleFrameworkForXcode
-        env:
-          CONFIGURATION: Debug
-          SDK_NAME: iphonesimulator
-          PLATFORM_NAME: iphonesimulator
-          ARCHS: arm64
-          ACTION: build
-          BUILT_PRODUCTS_DIR: "${{ github.workspace }}/build/frameworks"
-          CONTENTS_FOLDER_PATH: "."
-          UNLOCALIZED_RESOURCES_FOLDER_PATH: "."
-
       - name: Build iOS App with xcodebuild
         run: |
           xcodebuild \
