@@ -30,6 +30,9 @@ jobs:
           PLATFORM_NAME: iphonesimulator
           ARCHS: arm64
           ACTION: build
+          BUILT_PRODUCTS_DIR: "${{ github.workspace }}/build/frameworks"
+          CONTENTS_FOLDER_PATH: "."
+          UNLOCALIZED_RESOURCES_FOLDER_PATH: "."
 
       - name: Build iOS App with xcodebuild
         run: |
