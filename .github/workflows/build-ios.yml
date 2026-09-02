@@ -40,4 +40,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ios-app-debug
-          path: build/DerivedData/Build/Products/Debug-iphonesimulator/iosApp.app
+          path: build/DerivedData/Build/Products/Debug-iphonesimulator/SIMCAP.app
