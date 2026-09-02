@@ -19,7 +19,7 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
 
-      - name: Grant execute permission for gradlew
+      - name: Make gradlew executable
         run: chmod +x gradlew
 
       - name: Build iOS App with xcodebuild
@@ -31,7 +31,10 @@ jobs:
             -configuration Debug \
             -derivedDataPath build/DerivedData \
             CODE_SIGNING_ALLOWED=NO \
-            CODE_SIGNING_REQUIRED=NO
+            CODE_SIGNING_REQUIRED=NO \
+            ENABLE_USER_SCRIPT_SANDBOXING=NO
+        env:
+          JAVA_HOME: ${{ env.JAVA_HOME }}
 
       - name: Upload iOS App Artifact
         uses: actions/upload-artifact@v4
